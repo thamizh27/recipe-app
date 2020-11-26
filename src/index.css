@@ -2,48 +2,67 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: rgba(255, 248, 201, 0.9);
 }
 
+/* loading icon style */
+.loader {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Header style */
+header {
+  width: 100%;
+  height: 80px;
+  background-color: khaki;
+  text-align: center;
+  border-bottom-left-radius: -100%;
+  border-bottom-right-radius: 100%;
+}
+
+header h1 {
+  padding: 20px;
+}
+
+/* Input style */
 .first {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .first input {
   width: 300px;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 30px;
   border: 0;
   box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.18),
     -4px -4px 5px 0px rgba(0, 0, 0, 0.18);
   font-size: 1.2rem;
-}
-
-.first button {
-  margin-top: 20px;
-  margin-bottom: 50px;
-  padding: 10px 50px;
-  border-radius: 30px;
-  font-size: 1.4rem;
-  border: 0;
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.7);
-  cursor: pointer;
+  margin-bottom: 70px;
   outline: none;
 }
-.first button:hover {
-  color: #ffffff;
-  background-color: #000000;
-}
 
+/* recipe div style */
 .wrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 0%;
 }
+
 .ingredients {
   text-align: center;
   width: 300px;
@@ -77,6 +96,8 @@
   width: 100px;
   height: 80px;
 }
+
+/* steps style */
 .steps {
   overflow-y: auto;
   font-size: 14px;
@@ -91,4 +112,47 @@
   visibility: initial;
   top: 0px;
   opacity: 1;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  margin-top: 50px;
+  background-color: rgba(36, 36, 36, 0.89);
+  color: rgba(255, 248, 201, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer p {
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 500px) {
+  .footer p {
+    letter-spacing: 0px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .first input {
+    width: 200px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .ingredients {
+    width: 250px;
+    height: 250px;
+    padding: 20px 10px;
+    margin: 15px;
+  }
+
+  .ingredients:hover {
+    width: 270px;
+    height: 270px;
+  }
 }
